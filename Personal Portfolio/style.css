@@ -5,7 +5,7 @@
     --color-dark: #525252;
     --color-black: #141415;
     --color-primary: hsl(214, 89%, 53%);
-    --color-primary-light: hsla(251, 89%, 53%, 0.12);
+    --color-primary-light: hsla(229, 94%, 49%, 0.12);
     --color-sucess: #29f5a6;
     --color-warning: #ffce31;
 
@@ -24,7 +24,7 @@
 }
 
 html{
-    font-size: 15px;
+    font-size: 1.1vw;
     scroll-behavior: smooth;
 }
 
@@ -61,7 +61,7 @@ h5{
 }
 
 p{
-    line-height: 1.8;
+    line-height: 1.8rem;
 }
 
 
@@ -291,8 +291,8 @@ section.landing .profile-area .outer-circle svg:nth-child(4){
 
 section.landing .profile-area .inner-circle {
     position: absolute;
-    width: 18rem;
-    height: 18rem;
+    width: 16rem;
+    height: 16rem;
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid var(--color-primary-light);
@@ -306,8 +306,12 @@ section.about{
 
 section.about .container{
     display: grid;
-    grid-template-columns: 26rem auto;
+    grid-template-columns: 26vw auto;
     gap: 5rem;
+}
+
+section.about .container .image-wrapper{
+ width: 20rem;
 }
 
 section.about p{
@@ -328,7 +332,7 @@ section.about .container .read-more{
 section.about .container .read-more:hover{
     text-decoration: underline;
 }
-
+ /* SKILLS SECTION */
 section.skills .container{
     width: 50%;
    
@@ -443,6 +447,57 @@ section.skills .skill:nth-child(2) .item:nth-child(5) .progress-bar .progress{
     width: 50%;
     
 }
+
+/* SERVICES SECTION */
+section.services{
+    background: var(--color-light);
+}
+
+section.services .container{
+   
+    /** display:flex;
+    justify-content: center;
+    align-items: center;
+     **/
+     display:grid;
+     grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+section.services .container .service{
+    background: var(--color-white);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    cursor: dafault;
+    transition: var(--transition);
+}
+
+section.services .container .service:hover{
+    box-shadow: 0 3rem 3rem var(--color-primary-light);
+}
+
+section.services .container .service span{
+    background: var(--color-primary);
+    font-size: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--color-white);
+}
+
+section.services .container .service:nth-child(2) span{
+    background: var(--color-warning);
+}
+
+
 
 
 

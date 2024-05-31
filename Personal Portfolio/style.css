@@ -23,6 +23,15 @@
      
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--color-primary-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+}
+
 html{
     font-size: 15px;
     scroll-behavior: smooth;
@@ -113,6 +122,12 @@ nav{
     top: 0;
     z-index: 2; 
     border: 1px solid var(--color-light);
+}
+
+/* add box shadow on scroll */
+nav.show-box-shadow {
+box-shadow: 0 0.6rem 1rem var(--color-primary-light);
+border: none;
 }
 
 .container{
@@ -367,6 +382,7 @@ section.skills .skill .head .left{
     gap: 1rem;
 }
 
+
 section.skills .skill .item{
     display: flex;
     flex-direction: column;
@@ -451,12 +467,21 @@ section.skills .skill:nth-child(2) .item:nth-child(5) .progress-bar .progress{
     
 }
 
+section.skills .skill .items {
+ display: none;
+}
+ /* for javascript show/hide items */
+ section.skills .skill .items.show-items {
+    display: block;
+ }
+
+
 /* SERVICES SECTION */
 section.services{
     background: var(--color-light);
 }
 
-section.services .container{
+section.services .container {
    
     /** display:flex;
     justify-content: center;

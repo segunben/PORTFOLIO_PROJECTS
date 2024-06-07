@@ -136,6 +136,12 @@ border: none;
     
 }
 
+.container .logo img {
+    width: 5rem;
+    height: 4rem;
+    
+}
+
 
 nav .container {
     display: flex; 
